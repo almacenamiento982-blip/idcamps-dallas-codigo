@@ -51,7 +51,7 @@ footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid va
 <div class="codigo"><b>JUVESPECTRUM</b><span>USD 25 de descuento · válido hasta el sábado 24 de octubre</span></div>
 <div class="resumen">
   <div><b>47</b><span>familias registradas sin pagar · reciben correo y SMS</span></div>
-  <div><b>60</b><span>familias de 2024 (45) y 2025 (15) que no se han registrado este año</span></div>
+  <div><b>60</b><span>familias de 2024 (45) y 2025 (15) que no se han registrado este año · reciben correo y SMS</span></div>
   <div><b>75</b><span>opcional: familias que se registraron en 2024 (60) o 2025 (15) y nunca pagaron</span></div>
   <div><b>14</b><span>familias que Jesús llama primero: se registraron varias veces sin terminar o en los últimos 3 días</span></div>
 </div>
@@ -59,7 +59,7 @@ footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid va
 
 
 <h2 style="margin-top:30px">Envíos de esta semana</h2>
-<div class="tabla"><table class="semana"><tbody><tr><td>Lun 19</td><td><a href="#email_codigo">Correo con el código a las familias registradas sin pagar</a></td></tr><tr><td>Lun 19</td><td><a href="#email_welcome">Correo &quot;Bienvenidos de vuelta&quot; a las familias de 2024 y 2025</a></td></tr><tr><td>Lun 19</td><td><a href="#email_pasadas">Correo a las familias de 2024 y 2025 que nunca pagaron (opcional)</a></td></tr><tr><td>Mar 20</td><td><a href="#sms_codigo">SMS recordatorio del código</a></td></tr><tr><td>Mar 20</td><td>Llamadas de Jesús a las 47 familias sin pagar · <a href="https://docs.google.com/spreadsheets/d/1dWJXIZYYuDQmu5W3GquRT2XFFEoXhDZaMqLdXzuwAt8/edit" target="_blank" rel="noopener">Ver la lista de llamadas</a><br><small class="nota-ll">En naranja, las familias que se registraron más de una vez sin terminar. Lista privada: solo la abre quien tenga acceso.</small></td></tr><tr><td>Jue 22</td><td>Correo de preguntas frecuentes (ya programado)</td></tr><tr><td>Sáb 24</td><td><a href="#sms_ultimo">SMS &quot;hoy es el último día&quot; (opcional)</a></td></tr></tbody></table></div>
+<div class="tabla"><table class="semana"><tbody><tr><td>Lun 19</td><td><a href="#email_codigo">Correo con el código a las familias registradas sin pagar</a></td></tr><tr><td>Lun 19</td><td><a href="#email_welcome">Correo &quot;Bienvenidos de vuelta&quot; a las familias de 2024 y 2025</a></td></tr><tr><td>Lun 19</td><td><a href="#email_pasadas">Correo a las familias de 2024 y 2025 que nunca pagaron (opcional)</a></td></tr><tr><td>Mar 20</td><td><a href="#sms_codigo">SMS recordatorio del código a las familias sin pagar</a></td></tr><tr><td>Mar 20</td><td><a href="#sms_welcome">SMS &quot;welcome back&quot; a las familias de 2024 y 2025</a></td></tr><tr><td>Mar 20</td><td>Llamadas de Jesús a las 47 familias sin pagar · <a href="https://docs.google.com/spreadsheets/d/1dWJXIZYYuDQmu5W3GquRT2XFFEoXhDZaMqLdXzuwAt8/edit" target="_blank" rel="noopener">Ver la lista de llamadas</a><br><small class="nota-ll">En naranja, las familias que se registraron más de una vez sin terminar. Lista privada: solo la abre quien tenga acceso.</small></td></tr><tr><td>Jue 22</td><td>Correo de preguntas frecuentes (ya programado)</td></tr><tr><td>Sáb 24</td><td><a href="#sms_ultimo">SMS &quot;hoy es el último día&quot; (opcional)</a></td></tr></tbody></table></div>
 
 <section class="pieza" id="email_codigo">
   <div class="cab"><span class="num">1</span><div><p class="tipo">Correo · Hoy, lunes 19 de octubre, 6:00 pm (hora de Dallas)</p><h2>Tu código de USD 25 para el ID Camp de Dallas</h2></div></div>
@@ -113,8 +113,21 @@ footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid va
   <div class="nota" data-id="SMS_CODIGO" hidden><textarea rows="2" placeholder="Nota o cambio que se pide (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
   <p class="estado" data-estado="SMS_CODIGO" aria-live="polite"></p>
 </section>
+<section class="pieza" id="sms_welcome">
+  <div class="cab"><span class="num">5</span><div><p class="tipo">SMS · Martes 20 de octubre, 9:00 am (Dallas)</p><h2>Bienvenidos de vuelta</h2></div></div>
+  <dl class="ficha"><dt>Para</dt><dd>Las familias que vinieron en 2024 o 2025 y no se han registrado este año: <b>60 teléfonos</b></dd><dt>Largo</dt><dd>87 de 91 caracteres: llega como 1 solo SMS</dd><dt>Triggers de venta</dt><dd>Identificación (&quot;welcome back&quot;) · Urgencia (hasta el sábado) · Especificidad (USD 25)</dd></dl>
+  <div class="tel"><div class="burbuja">Maria, welcome back! Code JUVESPECTRUM = $25 off ID Camp Dallas. Until Saturday: <u>juventuscampsusa.com/…</u></div></div>
+  <p class="trad">En español: María, ¡bienvenidos de vuelta! El código JUVESPECTRUM te da USD 25 de descuento en el ID Camp de Dallas. Hasta el sábado:</p>
+  <p class="trad">Las que nunca pagaron (pieza 3) reciben solo el correo: el SMS del 8 de octubre ya les llegó a casi todas y no trajo pagos.</p>
+  <div class="acciones" data-id="SMS_WELCOME">
+    <button type="button" class="aprobar" data-accion="aprobar">Aprobar este SMS</button>
+    <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+  </div>
+  <div class="nota" data-id="SMS_WELCOME" hidden><textarea rows="2" placeholder="Nota o cambio que se pide (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+  <p class="estado" data-estado="SMS_WELCOME" aria-live="polite"></p>
+</section>
 <section class="pieza" id="sms_ultimo">
-  <div class="cab"><span class="num">5</span><div><p class="tipo">SMS · Sábado 24 de octubre, 9:00 am (Dallas)</p><h2>Último día del código (opcional)</h2></div></div>
+  <div class="cab"><span class="num">6</span><div><p class="tipo">SMS · Sábado 24 de octubre, 9:00 am (Dallas)</p><h2>Último día del código (opcional)</h2></div></div>
   <dl class="ficha"><dt>Para</dt><dd>Las familias que sigan sin pagar ese día</dd><dt>Largo</dt><dd>73 de 91 caracteres: llega como 1 solo SMS</dd><dt>Triggers de venta</dt><dd>Urgencia · Especificidad</dd></dl>
   <div class="tel"><div class="burbuja">Maria, last day today: code JUVESPECTRUM = $25 off ID Camp Dallas: <u>juventuscampsusa.com/…</u></div></div>
   <p class="trad">En español: María, hoy es el último día: el código JUVESPECTRUM te da USD 25 de descuento en el ID Camp de Dallas:</p>
