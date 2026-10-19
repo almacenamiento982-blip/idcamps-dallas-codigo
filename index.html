@@ -1,0 +1,162 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><title>Dallas · Código JUVESPECTRUM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f2ef;--panel:#fff;--ink:#121212;--ink2:#46464b;--muted:#75747a;--line:#e0ded8;--oro:#946b1c;--oro2:#f6eedc;--ok:#1d7a4a;--ok2:#e3f3ea;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0f0f;--panel:#1a1a1a;--ink:#f2f1ec;--ink2:#c9c8c1;--muted:#8f8e88;--line:#2e2e2e;--oro:#d8b45a;--oro2:#2f2716;--ok:#5cc98c;--ok2:#14301f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0f0f;--panel:#1a1a1a;--ink:#f2f1ec;--ink2:#c9c8c1;--muted:#8f8e88;--line:#2e2e2e;--oro:#d8b45a;--oro2:#2f2716;--ok:#5cc98c;--ok2:#14301f;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Barlow,system-ui,"Segoe UI",sans-serif}
+.env{max-width:980px;margin:0 auto;padding-inline:18px;padding-block:28px 60px}
+h1,h2{font-family:"Barlow Condensed",Barlow,sans-serif;margin:0;line-height:1.1;text-wrap:balance}h1{font-size:clamp(30px,5.5vw,46px);text-transform:uppercase}h2{font-size:24px}
+.franja{height:6px;width:64px;background:var(--oro);border-radius:3px;margin-bottom:14px}
+.k{font-weight:600;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--oro);margin:0 0 8px}
+.lead{color:var(--ink2);font-size:18px;max-width:72ch;margin:12px 0 0}
+.codigo{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:18px 0 0;padding:16px 18px;border:2px dashed var(--oro);border-radius:12px;background:var(--oro2)}
+.codigo b{font:700 30px "Barlow Condensed",sans-serif;letter-spacing:2px}.codigo span{color:var(--ink2)}
+.resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.resumen div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.resumen b{display:block;font:700 32px "Barlow Condensed",sans-serif;font-variant-numeric:tabular-nums}.resumen span{color:var(--muted);font-size:14.5px}
+.quien{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.quien label{display:flex;gap:6px;align-items:center;font-weight:600;cursor:pointer;padding:4px 10px;border:1px solid var(--line);border-radius:999px}
+.tabla{overflow-x:auto;margin-top:10px}table{border-collapse:collapse;width:100%;min-width:560px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+td,th{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}tr:last-child td{border-bottom:0}
+td:first-child{white-space:nowrap;font-weight:600}td:nth-child(2){white-space:nowrap;color:var(--muted)}
+.canal{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--oro2);color:var(--oro)}
+tr.ya td{color:var(--muted)}tr.opc td:last-child{font-style:italic}
+td a{color:var(--oro);font-weight:600}
+.pieza{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:20px}
+.pieza.listo{border-color:var(--ok);box-shadow:0 0 0 1px var(--ok)}
+.cab{display:flex;gap:12px;align-items:flex-start}.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 16px "Barlow Condensed",sans-serif;margin-top:2px}
+.tipo{margin:0 0 2px;font-size:13px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.ficha{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:14px 0}.ficha dt{font-weight:600}.ficha dd{margin:0;color:var(--ink2)}
+.marco{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#eceae6}iframe{display:block;width:100%;height:1200px;border:0}
+.abrir a{color:var(--oro);font-weight:600}
+.tel{max-width:380px;background:#e9e9ee;border-radius:22px;padding:22px 16px}.burbuja{background:#fff;color:#111;border-radius:18px 18px 18px 4px;padding:12px 14px;font:16px/1.4 -apple-system,"Segoe UI",sans-serif}
+.trad{color:var(--muted);font-size:15px;margin:10px 0 0}
+.acciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+button{font:600 15px Barlow,sans-serif;border-radius:8px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+button:focus-visible{outline:2px solid var(--oro);outline-offset:2px}.aprobar{background:var(--ok);border-color:var(--ok);color:#fff}
+.nota[hidden]{display:none}.nota{margin-top:10px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}.nota textarea{font:15px Barlow,sans-serif;width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.estado{margin:8px 0 0;font-size:14.5px;color:var(--ok);min-height:1em}
+.notas{list-style:none;padding:0;margin:8px 0 0;font-size:14.5px;color:var(--ink2)}.notas li{border-left:3px solid var(--oro);padding-left:10px;margin:6px 0}
+ul.puntos{padding-left:20px}ul.puntos li{margin:6px 0}
+footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+@media (max-width:600px){.ficha{grid-template-columns:1fr;gap:2px}.ficha dd{margin-bottom:8px}iframe{height:1000px}}
+</style></head><body><div class="env">
+<div class="franja"></div>
+<p class="k">ID Camp Dallas · 21 y 22 de noviembre · Para aprobar</p>
+<h1>Envío del código de USD 25</h1>
+<p class="lead">Lo acordado en la reunión del 19 de octubre: el código no va en los anuncios ni se publica. Llega solo a las familias de Dallas que empezaron la inscripción sin pagar y a las que vinieron en 2024 o 2025, con plazo hasta el domingo 25 de octubre. Se propone un correo hoy y un SMS mañana a las 9:00 am, antes de las llamadas de Jesús.</p>
+<div class="codigo"><b>JUVESPECTRUM</b><span>USD 25 de descuento · válido hasta el domingo 25 de octubre</span></div>
+<div class="resumen">
+  <div><b>47</b><span>familias registradas sin pagar · reciben correo y SMS</span></div>
+  <div><b>60</b><span>familias de 2024 (45) y 2025 (15) que no se han registrado este año</span></div>
+  <div><b>14</b><span>familias que Jesús llama primero: se registraron varias veces sin terminar o en los últimos 3 días</span></div>
+</div>
+<p class="trad">Cifras con la app de registro leída el 19 de octubre, 2:39 p. m. (hora de Miami). Antes de enviar se vuelve a sacar a quien haya pagado.</p>
+
+<div class="quien" role="radiogroup" aria-label="Quién revisa"><b>¿Quién revisa?</b>
+  <label><input type="radio" name="quien" value="Jesús"> Jesús</label>
+  <label><input type="radio" name="quien" value="Alessandro"> Alessandro</label></div>
+
+<h2 style="margin-top:30px">La semana del código</h2>
+<div class="tabla"><table><thead><tr><th>Día</th><th>Hora (Dallas)</th><th>Canal</th><th>Qué</th></tr></thead><tbody><tr class=""><td>Lun 19 oct</td><td>6:00 pm</td><td><span class="canal">Correo</span></td><td><a href="#email_codigo">Código de USD 25 a las familias registradas sin pagar</a></td></tr><tr class=""><td>Lun 19 oct</td><td>6:00 pm</td><td><span class="canal">Correo</span></td><td><a href="#email_welcome">&quot;Bienvenidos de vuelta&quot; a las familias de 2024 y 2025</a></td></tr><tr class=""><td>Mar 20 oct</td><td>9:00 am</td><td><span class="canal">SMS</span></td><td><a href="#sms_codigo">Recordatorio del código a las familias sin pagar</a></td></tr><tr class=""><td>Mar 20 oct</td><td>Todo el día</td><td><span class="canal">Llamadas</span></td><td>Jesús llama a las familias sin pagar (lista privada aparte)</td></tr><tr class="ya"><td>Jue 22 oct</td><td>10:00 am</td><td><span class="canal">Correo</span></td><td>Email B &quot;Lo que más preguntan los padres&quot; (ya aprobado el 15-10)</td></tr><tr class="opc"><td>Sáb 24 oct</td><td>12:30 pm</td><td><span class="canal">SMS</span></td><td><a href="#sms_ultimo">Opcional: &quot;mañana es el último día&quot; (reemplaza al SMS 3 del lunes 26)</a></td></tr><tr class=""><td>Dom 25 oct</td><td></td><td><span class="canal">Fin</span></td><td>Vence el plazo del código</td></tr></tbody></table></div>
+
+<section class="pieza" id="email_codigo">
+  <div class="cab"><span class="num">1</span><div><p class="tipo">Correo · Hoy, lunes 19 de octubre, 6:00 pm (hora de Dallas)</p><h2>Tu código de USD 25 para el ID Camp de Dallas</h2></div></div>
+  <dl class="ficha"><dt>Para</dt><dd>Familias de Dallas 2026-27 registradas sin pagar: <b>47 familias</b></dd>
+  <dt>Se ve antes de abrir</dt><dd>Termina la inscripción con JUVESPECTRUM antes del domingo 25 de octubre.</dd><dt>Por qué</dt><dd>Para las familias que empezaron la inscripción y no pagaron. El descuento les da un motivo nuevo para decidir, y el plazo corto (hasta el domingo) les da urgencia. Les avisa que Jesús las puede llamar, para que contesten.</dd></dl>
+  <div class="marco"><iframe src="email_codigo.html" title="Tu código de USD 25 para el ID Camp de Dallas"></iframe></div>
+  <p class="abrir"><a href="email_codigo.html" target="_blank" rel="noopener">Abrir el correo a pantalla completa</a></p>
+  <div class="acciones" data-id="EMAIL_CODIGO">
+    <button type="button" class="aprobar" data-accion="aprobar">Aprobar este correo</button>
+    <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+  </div>
+  <div class="nota" data-id="EMAIL_CODIGO" hidden><textarea rows="2" placeholder="Nota o cambio que se pide (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+  <p class="estado" data-estado="EMAIL_CODIGO" aria-live="polite"></p>
+</section>
+<section class="pieza" id="email_welcome">
+  <div class="cab"><span class="num">2</span><div><p class="tipo">Correo · Hoy, lunes 19 de octubre, 6:00 pm (hora de Dallas)</p><h2>Bienvenidos de vuelta: USD 25 para el ID Camp de Dallas</h2></div></div>
+  <dl class="ficha"><dt>Para</dt><dd>Familias que pagaron Dallas en 2024 o 2025 y no se han registrado este año: <b>60 familias</b></dd>
+  <dt>Se ve antes de abrir</dt><dd>Juventus vuelve a Soccer Spectrum el 21 y 22 de noviembre. Código exclusivo hasta el domingo 25 de octubre.</dd><dt>Por qué</dt><dd>Para las familias que ya vivieron el ID Camp de Dallas en 2024 o 2025 y aún no se registran este año. Ya conocen el camp: el mensaje es &quot;vuelven&quot; y un descuento exclusivo por ser familia Juventus.</dd></dl>
+  <div class="marco"><iframe src="email_welcome.html" title="Bienvenidos de vuelta: USD 25 para el ID Camp de Dallas"></iframe></div>
+  <p class="abrir"><a href="email_welcome.html" target="_blank" rel="noopener">Abrir el correo a pantalla completa</a></p>
+  <div class="acciones" data-id="EMAIL_WELCOME">
+    <button type="button" class="aprobar" data-accion="aprobar">Aprobar este correo</button>
+    <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+  </div>
+  <div class="nota" data-id="EMAIL_WELCOME" hidden><textarea rows="2" placeholder="Nota o cambio que se pide (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+  <p class="estado" data-estado="EMAIL_WELCOME" aria-live="polite"></p>
+</section>
+<section class="pieza" id="sms_codigo">
+  <div class="cab"><span class="num">3</span><div><p class="tipo">SMS · Martes 20 de octubre, 9:00 am (Dallas)</p><h2>Recordatorio del código</h2></div></div>
+  <dl class="ficha"><dt>Para</dt><dd>Las mismas familias sin pagar: <b>47 teléfonos</b></dd><dt>Largo</dt><dd>77 de 91 caracteres: llega como 1 solo SMS</dd></dl>
+  <div class="tel"><div class="burbuja">Maria, code JUVESPECTRUM = $25 off ID Camp Dallas. Valid until Sunday: <u>juventuscampsusa.com/…</u></div></div>
+  <p class="trad">En español: María, el código JUVESPECTRUM te da USD 25 de descuento en el ID Camp de Dallas. Válido hasta el domingo:</p>
+  <p class="trad">Va en inglés para que llegue como un solo mensaje (con tildes el sistema lo parte en dos). Sale a las 9:00 am, antes de que empiecen las llamadas de Jesús.</p>
+  <div class="acciones" data-id="SMS_CODIGO">
+    <button type="button" class="aprobar" data-accion="aprobar">Aprobar este SMS</button>
+    <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+  </div>
+  <div class="nota" data-id="SMS_CODIGO" hidden><textarea rows="2" placeholder="Nota o cambio que se pide (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+  <p class="estado" data-estado="SMS_CODIGO" aria-live="polite"></p>
+</section>
+<section class="pieza" id="sms_ultimo">
+  <div class="cab"><span class="num">4</span><div><p class="tipo">SMS · Sábado 24 de octubre, 12:30 pm (Dallas)</p><h2>Último día del código (opcional)</h2></div></div>
+  <dl class="ficha"><dt>Para</dt><dd>Las familias que sigan sin pagar ese día</dd><dt>Largo</dt><dd>76 de 91 caracteres: llega como 1 solo SMS</dd></dl>
+  <div class="tel"><div class="burbuja">Maria, last day tomorrow: code JUVESPECTRUM = $25 off ID Camp Dallas: <u>juventuscampsusa.com/…</u></div></div>
+  <p class="trad">En español: María, mañana es el último día: el código JUVESPECTRUM te da USD 25 de descuento en el ID Camp de Dallas:</p>
+  <p class="trad"><b>Opcional.</b> El SMS 3 ya programado ("300+ familias", lunes 26) saldría cuando el plazo del código ya venció. Se propone reemplazarlo por este, el sábado 24, a las mismas familias sin pagar (sin quien pague antes). Si no se aprueba, el SMS 3 queda como estaba.</p>
+  <div class="acciones" data-id="SMS_ULTIMO">
+    <button type="button" class="aprobar" data-accion="aprobar">Aprobar este SMS</button>
+    <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+  </div>
+  <div class="nota" data-id="SMS_ULTIMO" hidden><textarea rows="2" placeholder="Nota o cambio que se pide (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+  <p class="estado" data-estado="SMS_ULTIMO" aria-live="polite"></p>
+</section>
+
+<section class="pieza" style="border-style:dashed">
+  <h2>A tener en cuenta</h2>
+  <ul class="puntos">
+    <li><b>Quién no lo recibe:</b> las familias que ya pagaron (las de precio completo no se enteran del descuento) y los correos que rebotaron.</li>
+    <li><b>Cómo se mide:</b> cada enlace lleva su código de origen, así que se puede separar qué pagos vinieron de este correo o SMS y cuáles del volante o el post de Soccer Spectrum.</li>
+    <li><b>El plazo es de venta:</b> en el sistema el código sigue funcionando hasta el 27 de noviembre (es el código de Soccer Spectrum); el "hasta el domingo" es para dar urgencia.</li>
+    <li><b>Llamadas:</b> la lista con nombres y teléfonos, en orden de prioridad y con un guion corto, se entrega a Jesús aparte (no va en esta página).</li>
+  </ul>
+</section>
+<footer>Juventus Camps USA · ID Camp Dallas · Propuesta del 19-10-2026 · Página interna, no indexada. Nada se envía hasta tener las aprobaciones.</footer>
+</div>
+<script>const CFG={"accion": "https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse", "entry": {"pieza": 333677581, "cuenta": 724853821, "autor": 299801437, "comentario": 1175231019, "copy_corregido": 1649408514, "copy_original": 1637675582, "enviado": 909195940, "tipo": 1605073129, "zona": 1831673234, "fila": 1327618412}, "cuenta": "idcamps_dallas_codigo"};
+const QK='dal_codigo_quien', LK='dal_codigo_v1';
+const ls={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let quien=ls.get(QK,'');
+document.querySelectorAll('input[name=quien]').forEach(r=>{r.checked=r.value===quien;r.addEventListener('change',()=>{quien=r.value;ls.set(QK,quien)})});
+async function enviar(reg){const f=new URLSearchParams();for(const k in CFG.entry)f.append('entry.'+CFG.entry[k],reg[k]??'');
+  try{await fetch(CFG.accion,{method:'POST',mode:'no-cors',body:f});return true}catch(e){return false}}
+const EST={aprobados:{},notas:{}};
+function pintar(){document.querySelectorAll('[data-estado]').forEach(p=>{const id=p.dataset.estado,a=EST.aprobados[id]||{},
+  quienes=Object.keys(a);p.textContent=quienes.length?'Aprobado por '+quienes.join(' y '):'';
+  const sec=p.closest('.pieza');sec.classList.toggle('listo',quienes.length>0);
+  let ul=sec.querySelector('.notas');const ns=EST.notas[id]||[];
+  if(ns.length){if(!ul){ul=document.createElement('ul');ul.className='notas';p.after(ul)}ul.innerHTML=ns.map(n=>'<li><b>'+n.autor+':</b> '+n.texto.replace(/</g,'&lt;')+'</li>').join('')}})}
+function mezclar(j){for(const id in j.aprobados||{})EST.aprobados[id]=Object.assign(EST.aprobados[id]||{},j.aprobados[id]);
+  for(const id in j.notas||{}){const v=EST.notas[id]=EST.notas[id]||[];for(const n of j.notas[id])if(!v.some(x=>x.texto===n.texto))v.push(n)}pintar()}
+mezclar(ls.get(LK,{}));
+fetch('estado.json?t='+Date.now()).then(r=>r.ok?r.json():{}).then(mezclar).catch(()=>{});
+function pedirQuien(p){if(quien)return true;p.textContent='Primero marque arriba quién está revisando (Jesús o Alessandro).';p.style.color='var(--oro)';
+  document.querySelector('.quien').scrollIntoView({behavior:'smooth',block:'center'});return false}
+document.addEventListener('click',async ev=>{const b=ev.target.closest('[data-accion]');if(!b)return;
+  const caja=b.closest('[data-id]'),id=caja.dataset.id,p=document.querySelector('[data-estado="'+id+'"]');p.style.color='';
+  if(b.dataset.accion==='nota'){const n=document.querySelector('.nota[data-id="'+id+'"]');n.hidden=!n.hidden;if(!n.hidden)n.querySelector('textarea').focus();return}
+  if(!pedirQuien(p))return;
+  const local=ls.get(LK,{aprobados:{},notas:{}});
+  if(b.dataset.accion==='aprobar'){p.textContent='Guardando…';
+    const ok=await enviar({pieza:id,cuenta:CFG.cuenta,autor:quien,tipo:'aprobado',comentario:'',enviado:new Date().toISOString(),zona:'',fila:'',copy_original:'',copy_corregido:''});
+    if(!ok){p.textContent='No se pudo guardar. Revise la conexión e intente de nuevo.';return}
+    (local.aprobados[id]=local.aprobados[id]||{})[quien]=new Date().toISOString();ls.set(LK,local);mezclar(local)}
+  if(b.dataset.accion==='enviar-nota'){const ta=caja.querySelector('textarea'),t=ta.value.trim();if(!t)return;p.textContent='Enviando…';
+    const ok=await enviar({pieza:id,cuenta:CFG.cuenta,autor:quien,tipo:'comentario',comentario:t,enviado:new Date().toISOString(),zona:'',fila:'',copy_original:'',copy_corregido:''});
+    if(!ok){p.textContent='No se pudo enviar la nota.';return}
+    (local.notas[id]=local.notas[id]||[]).push({autor:quien,texto:t});ls.set(LK,local);ta.value='';caja.hidden=true;mezclar(local);p.textContent=(p.textContent?p.textContent+' · ':'')+'Nota enviada.'}});
+</script></body></html>
